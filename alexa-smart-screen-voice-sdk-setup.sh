@@ -49,14 +49,14 @@ make
 pip install commentjson
 
 cd $HOME/sdk-folder/sdk-source    
-git clone --single-branch --branch v1.21.0 git://github.com/alexa/avs-device-sdk.git
+git clone --single-branch --branch v1.21.0 https://github.com/alexa/avs-device-sdk.git
 
 if [ "$enable_wake_word" = true ] ; then
     # This installs the sensory library to enable wake word.  
     # It pauses the installation asking for liscense agreement.
     # There should really be a switch here to enable/disable
     cd $HOME/sdk-folder/third-party
-    git clone git://github.com/Sensory/alexa-rpi.git
+    git clone https://github.com/Sensory/alexa-rpi.git
     cd $HOME/sdk-folder/third-party/alexa-rpi/bin/
     ./license.sh
 
